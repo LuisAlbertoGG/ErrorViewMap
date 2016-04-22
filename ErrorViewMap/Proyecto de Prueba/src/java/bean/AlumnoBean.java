@@ -5,9 +5,10 @@
  */
 package bean;
 
-import Dao.ClasesDao;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ViewScoped;
+
+import Dao.ClasesDao;
 
 /**
  *
@@ -21,7 +22,7 @@ public class AlumnoBean {
      private String AContrasenha;
      private String ACorreo;
      private ClasesDao c;
-     
+
     public AlumnoBean() {
         c = new ClasesDao();
     }
@@ -57,10 +58,10 @@ public class AlumnoBean {
     public void setACorreo(String ACorreo) {
         this.ACorreo = ACorreo;
     }
-    
+
     public String guardarAlumno(){
         c.indroducirAlumno(ANombre, AContrasenha, ACorreo);
         return "index";
     }
-    
+
 }
